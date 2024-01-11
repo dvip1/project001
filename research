@@ -1,0 +1,34 @@
+Restudent: A Platform to Ignite Student Interest in Research
+Introduction
+Restudent is a web-based platform designed to foster student interest in research by providing a user-friendly interface and a range of features to connect students, mentors, and researchers. The platform incorporates modern web technologies such as HTML, React, and CSS to create an attractive and interactive user experience.
+
+Features
+Authentication
+Users can log in or sign up to access the platform's features securely.
+Homepage
+Display data in an attractive video-like format using HTML, React, and CSS to engage users instantly.
+Mentor/Researcher/Professor
+Allow mentors, researchers, and professors to register with the platform by providing certificates or unique IDs.
+Enable them to share their research information and specify their research domain.
+Research Domains
+Include a comprehensive list of research domains for users to explore.
+Research Trends in India
+Showcase which research domains require more attention in India.
+Student Research Domain Assistance
+Help students discover suitable research domains based on their interests and skills.
+Feedback System
+Implement a feedback system for users to provide input on the platform and research projects.
+Community Building
+Allow users to create and join communities based on their research interests.
+Collaboration with Organizations
+Enable the submission of research projects to organizations such as ISRO, DRDO, or other companies for potential collaboration.
+Career Information
+Highlight the promising career prospects in research, emphasizing competitive salaries and a bright future.
+Research Paper and Patent Support
+Provide assistance in writing research papers and guide users through the patent registration process for successful research.
+Recognition System
+Implement a star or rating system to acknowledge and reward outstanding research contributions.
+Subscription/Support
+Include options for users to subscribe to premium features or receive additional support.
+Public Viewing
+Allow non-registered users to view research posts, but interaction actions like commenting and reactions require an account.
