@@ -1,5 +1,6 @@
 const express = require("express");
 const logger = require("morgan");
+const connect = require("./controllers/connect.js");
 
 const app = express();
 
