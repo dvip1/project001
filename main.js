@@ -1,5 +1,6 @@
 const express = require("express");
 const logger = require("morgan");
+const connect = require("./controllers/connect.js");
 
 const app = express();
 
@@ -8,7 +9,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // routes
-app.use("/post", require("./routes/postsRoute"))
+app.use("/post", require("./routes/postsRoute"));
+app.use("/user",require("./routes/userRoute"));
 
 const PORT = process.env.PORT || 5000;
 
