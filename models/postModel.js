@@ -10,14 +10,10 @@ const postSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    time: {
-        type: Date,
-        required: true
-    },
     support: {
         type: Number,
         default: 0
     }
-})
+}, { timestamps: true })
 
 module.exports = mongoose.model("Post", postSchema);
