@@ -15,7 +15,7 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-        set: value => bcrypt.hashSync(value, 10) // hash the password before storing
+        set: value => bcrypt.hashSync(value, 10)
     },
     birthday: Date,
     gender: {
@@ -23,6 +23,8 @@ const userSchema = new mongoose.Schema({
         enum: ['male', 'female']
     },
     profession: String,
+    posts: [String],
+    supportedPosts: [String]
 }, { timestamps: true });
 
 module.exports = mongoose.model("User", userSchema)
