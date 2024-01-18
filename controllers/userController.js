@@ -16,7 +16,7 @@ userController.update = async (req, res) => {
             { name: name, email: email },
             { new: true }).select("name email");
 
-        if (updated) res.json({ message: "user updated", data: updated })
+        if (updated) res.json(updated)
         else res.json({ message: "failed to update, user not found" })
     } catch (e) {
         return res.status(500).json(e)
@@ -26,7 +26,7 @@ userController.update = async (req, res) => {
 userController.getUser = async (req, res) => {
     const userId = req.params.userId;
     if (! mongoose.isValidObjectId(userId)) return res.status(404).json({ message: "userId is not valid" })
-    const user = await userModel.findOne({ _id: userId }).select("name email").lean().exec();
+    const user = await userModel.findOne({ _id: userId }).select("-password").lean().exec();
     if (user) res.json(user)
     else res.json({ message: "user not found" })
 }
