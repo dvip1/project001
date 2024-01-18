@@ -39,7 +39,7 @@ authController.signin = async (req, res) => {
 
     if (!passwordMatch) return res.status(401).json({ message: "wrong password" });
 
-    const token = jwt.sign({ id: existingUser._id }, "test")
+    const token = jwt.sign({ id: existingUser._id }, process.env.TOKEN_SECRET)
 
     res.json({ token })
 }
