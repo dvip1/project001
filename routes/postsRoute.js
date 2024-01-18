@@ -1,13 +1,16 @@
 const postController = require("../controllers/postController");
-
+const authorize = require("../middleware/authorize");
 const router = require("express").Router();
 
 router.route("/post")
-    .post(postController.addPost)
-    .put(postController.updatePost)
+    .post(authorize, postController.addPost)
+    .put(authorize, postController.updatePost)
 
 router.route("/post/:postId")
-    .get(postController.getPost)
-    .delete(postController.deletePost)
+    .get(authorize, postController.getPost)
+    .delete(authorize, postController.deletePost)
+
+router.route("/user/:userId")
+    .get(postController.getUserPost)
 
 module.exports = router;
